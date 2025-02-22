@@ -1,5 +1,5 @@
 # ---------- Fase de Build (builder) ----------
-FROM node:18-alpine AS builder
+FROM node:18 AS builder
 
 # Define o diretório de trabalho
 WORKDIR /app
@@ -28,7 +28,7 @@ RUN cp -R frontend/build backend/build
 RUN cd backend && npx prisma generate
 
 # ---------- Fase de Execução (runner) ----------
-FROM node:18-alpine AS runner
+FROM node:18 AS runner
 
 # Define a variável de ambiente para produção
 ENV NODE_ENV=production
