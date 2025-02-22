@@ -46,4 +46,4 @@ RUN cd backend && npm install --production
 EXPOSE 3000
 
 # Inicia o servidor (arquivo principal index.js dentro de /backend)
-CMD ["node", "backend/index.js"]
+CMD ["node", "backend/src/index.js"]
