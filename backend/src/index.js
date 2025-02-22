@@ -36,7 +36,7 @@ app.use('/api', apiRoutes);
 // ========================================
 
 // Diretório onde estará o build do frontend (copiado em processo de build)
-const buildPath = path.join(__dirname, 'build');
+const buildPath = path.join(__dirname, './build');
 
 // Serve os arquivos estáticos do build do frontend
 app.use(express.static(buildPath));
