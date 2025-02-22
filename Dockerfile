@@ -22,7 +22,7 @@ COPY frontend/ ./frontend/
 RUN cd frontend && npm run build
 
 # Copia o build do frontend para o backend
-RUN cp -R frontend/build backend/build
+RUN cp -R frontend/build backend/src/build
 
 # Gera os arquivos do Prisma
 RUN cd backend && npx prisma generate
